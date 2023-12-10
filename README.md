@@ -1,6 +1,6 @@
 # SmartHumidifier IoT 클라우드 플랫폼
 
-![SmartHumidifier](assets/SmartHumidifier.png)
+<img src="assets/device.jpg" alt="SmartHumidifier" width="300"/>  <!-- Adjust the width as needed -->
 
 이 프로젝트는 AWS와 아두이노를 사용하여 지능형 가습기를 구축합니다. 이 가습기는 환경의 습도와 가습기의 물 잔량을 모니터링하고, 이를 기반으로 자동으로 작동하거나 사용자에게 경고 이메일을 보내는 기능을 포함합니다.
 
