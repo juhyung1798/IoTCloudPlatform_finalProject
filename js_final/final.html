@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AWS Open API Sample</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="finalListingDevice.js"></script>
+    <script src="finalLogDeviceStatus.js"></script>
+</head>
+<body>
+    <section id="deviceListSection" class="container">
+        <h2>나의 디바이스 목록</h2>
+        <input type="button" value="조회" onclick="Start_listing();" class="button" />
+        <table id="mytable">
+            <thead>
+                <tr>
+                    <th>디바이스 명</th>
+                    <th>디바이스 ARN</th>
+                </tr>
+            </thead>
+            <tbody> </tbody>
+        </table>
+    </section>
+
+    <section id="deviceStatusSection" class="container">
+        <h2>나의 디바이스 상태 조회</h2>
+        <input type="text" name="username" placeholder="Enter your username" class="input-field">
+        <input type="button" value="조회 시작" onclick="Start_Status();" class="button" />
+        <input type="button" value="조회 중지" onclick="Stop_Status();" class="button" />
+        <div id="result_Status"></div> <!-- 여기에 추가했습니다 -->
+        <table id="statusTable">
+            <thead>
+                <tr>
+                    <th>Temperature (°C)</th>
+                    <th>Humidity (%)</th>
+                    <th>Water Level</th>
+                    <th>Relay</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="statusRow">
+                    <!-- 결과가 여기에 표시됩니다 -->
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+    
+    <section id="humidityLogSection" class="container">
+        <h1>온습도 로그</h1>
+        <p>날짜는 yyyy-mm-dd 형식으로 적어주세요</p>
+        <input type="text" id="name" placeholder="name" class="input-field">
+        <input type="text" id="from" placeholder="from" class="input-field">
+        <input type="text" id="to" placeholder="to" class="input-field">
+        <button id="LogCheckButton" type="button" class="button">로그 확인하기</button>
+        <div id="content">
+            <div id="log">
+                <p id="logtext">로그</p>
+                <p id="logdata"></p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="deviceChangeSection" class="container">
+        <p>상태변경 할 device 명을 검색하세요</p>
+        <input type="text" id="name_change" placeholder="name" class="input-field">
+        <button id="RelayON" type="button" class="button">ON</button>
+        <button id="RelayOFF" type="button" class="button">OFF</button>
+    </section>
+
+    <script type="text/javascript" src="finalLogDevice.js"></script>
+    <script type="text/javascript" src="finalChangeStatus.js"></script>
+</body>
+</html>
